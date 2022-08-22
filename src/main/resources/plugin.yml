@@ -1,0 +1,24 @@
+name: KalosMoreFish
+author: Red_Carl
+website: http://elsiff.me
+version: 2.1.3
+main: me.elsiff.morefish.MoreFish
+softdepend: [Vault, ProtocolLib]
+commands:
+  morefish:
+    description: MoreFish 的主要命令.
+    usage: /morefish
+    aliases: [mf, fish]
+permissions:
+  morefish.admin:
+    default: op
+    description: Morefish的管理权限.
+  morefish.help:
+    default: true
+    description: Morefish的Help命令权限 ( /morefish help ).
+  morefish.top:
+    default: true
+    description: Morefish的Top命令权限 ( /morefish top ).
+  morefish.shop:
+    default: op
+    description: Morefish的Shop命令权限 ( /morefish Shop ).

@@ -1,0 +1,58 @@
+version: 210
+
+general:
+  # 语言文件
+  locale: 'zh'
+  # 是否检测更新
+  check-update: true
+  # 是否自动启动
+  auto-start: false
+  # 是否使用BOSS血条
+  use-boss-bar: true
+  # 只在竞赛时开启本插件功能（改为True可在一定程度上防止AutoFish）
+  only-for-contest: false
+  # 除了钓鱼竞赛的时候之外，禁止钓更多的鱼
+  no-fishing-unless-contest: false
+  # 钓鱼竞赛不启用的世界
+  contest-disabled-worlds: []
+  # 只启用更多的鱼 ( 禁用竞赛等 )
+  replace-only-fish: false
+  # 保存设置的钓鱼竞赛奖励
+  save-records: false
+# 自动定时启动钓鱼竞赛
+auto-running:
+  # 是否启用
+  enable: false
+  # 最少需要玩家
+  required-players: 5
+  # 持续时间 ( 以秒为单位 )
+  timer: 300
+  # HH:mm (H: 0-23, m: 0-59) 启动时间
+  start-time:
+  - "09:00"
+  - "11:30"
+  - "14:00"
+  - "18:00"
+  - "21:00"
+# 贩鱼商店
+fish-shop:
+  # 是否启用贩鱼商店
+  enable: true
+  multiplier: 0.1
+  round-decimal-points: true
+
+# -- BOSS血条公告 --
+# '-1' 则表示全服广播
+# '0' 则表示只有参与者才显示
+# 如果填写正数则表示 the block radius of announcing messages
+messages:
+  announce-catch: -1
+  announce-new-1st: -1
+  broadcast-start: true
+  broadcast-stop: true
+  show-top-on-ending: true
+  # 血条颜色
+  contest-bar-color: 'blue'
+  # /mf top 显示多少名
+  top-number: 3
+
