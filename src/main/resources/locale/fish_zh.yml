@@ -1,12 +1,3 @@
-#
-# fish_tw.yml for MoreFish
-# 翻译 by blockboard08 (2.1.0)
-# 转简 by Maple_sail
-#
-# Wiki:
-# - https://github.com/elsiff/MoreFish/wiki/Custom-Fish-Tutorial
-# - https://github.com/elsiff/MoreFish/wiki/Custom-Rarity-Tutorial
-
 version: 212
 
 # %player% - 玩家的名次顺序 (e.g. 1st, 2nd, 3rd, 4th)
@@ -25,31 +16,32 @@ rarity-list:
   common:
     display-name: "一般"
     default: true
-    color: "reset"
+    color: "WHITE"
     # 该品质鱼的贩卖价格
-    additional-price: 0.0
+    additional-price: 0.5
     no-broadcast: true
     no-display: true
   junk:
     display-name: "垃圾"
     chance: 1
-    color: "gray"
-    additional-price: -999999
+    color: "GRAY"
+    additional-price: 0.1
+    no-broadcast: true
     no-display: true
   rare:
     display-name: "稀有"
-    chance: 22
-    color: "aqua"
+    chance: 10.5
+    color: "AQUA"
     additional-price: 3.0
   epic:
     display-name: "史诗"
     chance: 6.5
-    color: "light_purple"
+    color: "LIGHT_PURPLE"
     additional-price: 4.0
   legendary:
     display-name: "传说"
     chance: 0.5
-    color: "green"
+    color: "GOLD"
     additional-price: 5.0
     firework: true
 
@@ -243,3 +235,48 @@ fish-list:
         saturation: 14.4
         commands:
         - "minecraft:effect @p minecraft:regeneration 2 127"
+    Kyogre:
+      display-name: "盖欧卡"
+      length-min: 700
+      length-max: 1000
+      icon:
+        id: "minecraft:fish"
+        lore:
+        - "&7盖欧卡是水属性传说的宝可梦。"
+        - "&7拥有原始回归的样子。"
+        - "&7它是超古代宝可梦之一。"
+    Kyogre:
+      display-name: "盖欧卡"
+      length-min: 700
+      length-max: 1000
+      icon:
+        id: "minecraft:fish"
+        lore:
+        - "&7盖欧卡是水属性传说的宝可梦。"
+        - "&7拥有原始回归的样子。"
+        - "&7它是超古代宝可梦之一。"
+    Kun:
+      display-name: "鲲"
+      length-min: 1000
+      length-max: 1200
+      icon:
+        id: "minecraft:fish"
+        lore:
+        - "&7传说中的大鱼，生活在北边幽深的大海--北冥。"
+    MekongGiantCatfish:
+      display-name: "湄公河巨型鲶鱼"
+      length-min: 200
+      length-max: 300
+      icon:
+        id: "minecraft:fish"
+        lore:
+        - "&7巨无齿鷶是鮎形目大型淡水鱼类之一"
+        - "&7最大的个体长达2.5-3米，重200-300千克。"
+    WhaleShark:
+      display-name: "鲸鲨"
+      length-min: 1000
+      length-max: 1250
+      icon:
+        id: "minecraft:fish"
+        lore:
+        - "&7身体庞大，全长可达20米，是世界上最大的鱼类。"

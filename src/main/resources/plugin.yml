@@ -1,8 +1,9 @@
+main: red.kalos.morefish.MoreFish
 name: KalosMoreFish
-author: Red_Carl
-website: http://elsiff.me
-version: 2.1.3
-main: me.elsiff.morefish.MoreFish
+version: ${project.version}
+authors:
+  - Red_Carl
+website: https://github.com/RedCarl/KalosMoreFish
 softdepend: [Vault, ProtocolLib]
 commands:
   morefish:
