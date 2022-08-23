@@ -274,7 +274,8 @@ public class FishManager {
                 String data = encodeFishData(fish);
                 meta.setDisplayName(displayName + data);
             }catch (NullPointerException e){
-                System.out.println(displayName +" "+encodeFishData(fish));
+                System.out.println(meta);
+                System.out.println(itemStack);
             }
 
             List<String> lore = new ArrayList<>();
