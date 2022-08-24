@@ -14,28 +14,45 @@ public class IdentityUtils
   }
 
   public static Material getMaterial(String minecraftId) {
-    try {
-      Class<?> minecraftKey = Reflection.getNMSClass("MinecraftKey");
-      Object mk = minecraftKey.getConstructor(new Class[] { String.class }).newInstance(new Object[] { minecraftId });
+//    try {
+//      Class<?> minecraftKey = Reflection.getNMSClass("MinecraftKey");
+//      Object mk = minecraftKey.getConstructor(new Class[] { String.class }).newInstance(new Object[] { minecraftId });
+//
+//      Class<?> craftItemStack = Reflection.getCBClass("inventory.CraftItemStack");
+//      Class<?> itemClass = Reflection.getNMSClass("Item");
+//      Class<?> registryMaterials = Reflection.getNMSClass("RegistryMaterials");
+//
+//      Field field = itemClass.getDeclaredField("REGISTRY");
+//      field.setAccessible(true);
+//      Object registry = field.get(null);
+//
+//      Method get = registryMaterials.getMethod("get", new Class[] { Object.class });
+//      Object item = get.invoke(registry, new Object[] { mk });
+//
+//      Method asNewCraftStack = craftItemStack.getMethod("asNewCraftStack", new Class[] { itemClass });
+//      ItemStack itemStack = (ItemStack)asNewCraftStack.invoke(null, new Object[] { item });
+//
+//      return itemStack.getType();
+//    } catch (Exception e) {
+//      return null;
+//    }
+    //截取_之后字符串
+    String str1 = minecraftId.substring(0, minecraftId.indexOf("|"));
+    String str2 = minecraftId.substring(str1.length()+1, minecraftId.length());
 
-      Class<?> craftItemStack = Reflection.getCBClass("inventory.CraftItemStack");
-      Class<?> itemClass = Reflection.getNMSClass("Item");
-      Class<?> registryMaterials = Reflection.getNMSClass("RegistryMaterials");
+    String material =str1;
 
-      Field field = itemClass.getDeclaredField("REGISTRY");
-      field.setAccessible(true);
-      Object registry = field.get(null);
+    short data = Short.parseShort(str2);
+    Material.getMaterial(minecraftId);
+    return null;
+  }
 
-      Method get = registryMaterials.getMethod("get", new Class[] { Object.class });
-      Object item = get.invoke(registry, new Object[] { mk });
-
-      Method asNewCraftStack = craftItemStack.getMethod("asNewCraftStack", new Class[] { itemClass });
-      ItemStack itemStack = (ItemStack)asNewCraftStack.invoke(null, new Object[] { item });
-
-      return itemStack.getType();
-    } catch (Exception e) {
-      return null;
-    }
+  public static void main(String[] args) {
+    String str = "minecraft:fish|2";
+    //截取_之后字符串
+    String str1 = str.substring(0, str.indexOf("|"));
+    String str2 = str.substring(str1.length()+1, str.length());
+    System.out.println("截取_之后字符串:"+str2);
   }
 
   public static Enchantment getEnchantment(String minecraftId) {
